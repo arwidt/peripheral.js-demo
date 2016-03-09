@@ -1,0 +1,116 @@
+/*
+    Typography extends
+*/
+
+%h1 {
+    @include font-size-rem(1.8);
+
+    @include breakpoint($breakpoint--iphone-horizontal) {
+        @include font-size-rem(2.4);
+    }
+}
+
+%h3 {
+    @include font-size-rem(1.6);
+
+    @include breakpoint($breakpoint--iphone-horizontal) {
+        @include font-size-rem(2);
+    }
+}
+
+%h4 {
+    @include font-size-rem(1.3);
+
+    @include breakpoint($breakpoint--iphone-horizontal) {
+        @include font-size-rem(1.8);
+    }
+}
+
+%h5 {
+    @include font-size-rem(1.3);
+
+    @include breakpoint($breakpoint--iphone-horizontal) {
+        @include font-size-rem(1.6);
+    }
+}
+
+%h6 {
+    @extend %typography__typography-standard;
+    font-weight: $font-weight__bold;
+}
+
+
+/*
+    Base typography settings
+*/
+
+h1, h2, h3, h4, h5, h6, p, a, span {
+    @include breakpoint($breakpoint--sm) {
+      word-wrap: break-word;
+    }
+
+    @include breakpoint(max-width $breakpoint--ipad-vertical) {
+        word-wrap: break-word;
+    }
+}
+
+a {
+    @extend %inheritance;
+    text-decoration: none;
+}
+
+p {
+    margin: 0;
+    padding: .625em 0;
+}
+
+address {
+  font-style: normal;
+}
+
+blockquote {
+    margin: 1.5em 0px;
+
+    &::before {
+        content: "–";
+        padding-right: 5px;
+    }
+
+    p {
+        display: inline;
+    }
+}
+
+/*
+    Headers
+*/
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+    font-weight: $font-weight__bold;
+    line-height: 1.4;
+
+    @include breakpoint($breakpoint--iphone-horizontal) {
+        line-height: 1.2;
+    }
+}
+
+h1, h2 {
+    @extend %h1;
+}
+
+h3 {
+    @extend %h3;
+}
+
+h4 {
+    @extend %h4;
+}
+
+h5 {
+    @extend %h5;
+}
+
+h6 {
+    @extend %h6;
+}

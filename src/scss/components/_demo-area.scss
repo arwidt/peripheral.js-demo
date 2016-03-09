@@ -1,0 +1,7 @@
+
+.demo-area {
+    @extend %content-section;
+
+    background: $colors__background-4;
+    height: auto;
+}

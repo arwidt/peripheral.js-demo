@@ -1,0 +1,94 @@
+html, body {
+	height: 100%;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+body {
+	@extend %typography__typography-standard;
+	background-color: $colors__background-default;
+    overflow-x: hidden;
+    overflow-y: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+	margin: 0;
+	padding: 0;
+
+    &.page--recipe-iframe {
+        overflow-y: hidden;
+    }
+}
+
+
+/*doc
+---
+title: screen-reader-text
+name: screen-reader-text
+category: Helpers
+---
+
+Helper class for texts that are screen reader only. Mainly used for hidden headers in document layout.
+
+```html_example
+    <h3 class='screen-reader-text'>Main menu</h3>
+```
+
+*/
+
+.screen-reader-text {
+	clip: rect(1px, 1px, 1px, 1px);
+	position: absolute !important;
+	height: 1px;
+	width: 1px;
+	overflow: hidden;
+}
+
+figure {
+	margin: 0;
+}
+
+img, svg {
+	max-width: 100%;
+	height: auto;
+}
+
+iframe {
+    max-width: 100%;
+    border: 0;
+    overflow: hidden;
+}
+
+.hidden {
+	display: none;
+}
+
+.no-visibility {
+	opacity: 0;
+}
+
+.embed-wrapper {
+    @extend %responsive-iframe-container;
+}
+
+/*
+    Lists
+*/
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    display: block;
+    margin: 0;
+    padding: 0;
+}

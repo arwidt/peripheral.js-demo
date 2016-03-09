@@ -1,0 +1,13 @@
+/*
+**	file: _typography-mixins.scss
+**	path: assets/scss/globals/utilities/mixins/_typography-mixins.scss
+**
+**	Typographic mixins.
+**
+*/
+
+// This mixin creates a REM-based font-size with a pixel fallback. Assumes html element has 62.5% font-size.
+@mixin font-size-rem($sizeValue: 1.5) {
+    font-size: ($sizeValue * 10) + px;
+    font-size: $sizeValue + rem;
+}

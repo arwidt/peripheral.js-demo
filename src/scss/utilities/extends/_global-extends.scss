@@ -1,0 +1,73 @@
+/*doc
+---
+title: inheritance
+name: inheritance
+category: Extends - Global Extends
+---
+
+Helper extend to set a number of properties to inherit.
+
+*/
+
+%inheritance {
+	font-family: inherit;
+	font-weight: inherit;
+	color: inherit;
+	background-color: inherit;
+	line-height: inherit;
+	text-transform: inherit;
+	letter-spacing: inherit;
+}
+
+/*doc
+---
+title: responsive-iframe-container
+name: responsive-iframe-container
+category: Extends - Global Extends
+---
+
+Container for responsive iframes.
+
+*/
+
+%responsive-iframe-container {
+
+	position: relative;
+	padding-bottom: 56.25%;
+	height: 0;
+	overflow: hidden;
+	max-width: 100%;
+
+	iframe, object, embed {
+
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+	}
+}
+
+/*
+	Hide mobile
+*/
+
+%hide-mobile {
+	@include breakpoint($breakpoint--xs) {
+	  display: none !important;
+	}
+}
+
+%show-mobile {
+	@include breakpoint($breakpoint--sm) {
+		display: none;
+	}
+}
+
+/*
+	Total center
+*/
+
+%totalcenter {
+	@include totalcenter;
+}

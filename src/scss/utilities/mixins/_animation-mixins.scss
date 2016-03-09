@@ -1,0 +1,30 @@
+@mixin gradient-animation( $start, $end, $transTime, $solidEndColor: null) {
+  background-size: 100%;
+  background-image: linear-gradient($start, $end);
+  position: relative;
+  z-index: 1;
+
+  &::after {
+    @if($solidEndColor) {
+      background: $solidEndColor;
+    } @else {
+      background-image: linear-gradient($end, $start);
+    }
+
+    content: '';
+    display: block;
+    height: 100%;
+    position: absolute;
+    top: 0; left: 0;
+    opacity: 0;
+    width: 100%;
+    z-index: -100;
+    transition: opacity $transTime $transition_default;
+  }
+
+  &:hover {
+    &::after {
+      opacity: 1;
+    }
+  }
+}

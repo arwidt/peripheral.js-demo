@@ -1,0 +1,118 @@
+%full-size-click-area {
+	width: 100%;
+	height: 100%;
+	display: inline-block;
+}
+
+%button-on-hover {
+	transition: background .2s,color .2s,ease-in-out;
+}
+
+/*
+    Secondary button
+*/
+%button--secondary {
+    @extend %button-appearance;
+  	@include gradient-animation(#fff, #f0eff0, .3s);
+	background-color: #f0eff0;
+    color: $colors__general_primary;
+    border: 1px solid #d7d7d8;
+	text-shadow: none;
+}
+
+/*
+    External link button
+*/
+
+%button--external-link {
+	@extend %button-appearance;
+	@extend %external-link;
+  	background-image: none;
+	background-color: $colors__general_lightest;
+	border: 1px solid $colors__typography-link;
+	padding-left: 1em;
+	padding-right: 1em;
+	text-shadow: none;
+  	transition: background-color .3s $transition_default;
+
+	&:hover {
+		color: $colors__typography-link;
+		border-color: $colors__typography-link;
+		background-color: #f6f6f6;
+	}
+
+	&::after {
+		content: none;
+	}
+}
+
+/*
+	Close-button
+*/
+
+%button--close {
+	@extend .icon-icon_close-cross;
+	background: none;
+	border: none;
+	color: $colors__button-icon;
+	text-shadow: none;
+	box-shadow: none;
+	border-radius: 0;
+	padding: 10px;
+
+	&:hover {
+	  background: none;
+
+	  &::before {
+		color: lighten($colors__button-icon, 20%);
+	  }
+	}
+
+	&:active {
+	  box-shadow: none;
+	}
+
+	&::after {
+	  content: none;
+	}
+
+}
+
+/* Block link hover */
+
+%block-link-hover {
+	transition: .1s linear background-color;
+	&:hover {
+		background: #f6f6f6;
+	}
+}
+
+/* FACEBOOK */
+
+%facebook-connect-btn--big {
+	@include font-size-rem(2.4);
+	@extend .icon-icon_facebook-f;
+	transition: background .15s $transition_default;
+
+	border: none;
+	background: $colors__button-facebook-dark;
+	text-shadow: 0 1px 0 darken(#4c6bab, 20%);
+	border-radius: 60px;
+	padding: 0.9em 2em 0.9em 2em;
+	color: $colors__general_lightest;
+	position: relative;
+	padding-left: 80px;
+
+	&::before {
+		margin-right: 20px;
+		@include font-size-rem(4)
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
+		left: 40px;
+	}
+
+	&:hover {
+		background: $colors__button-facebook;
+	}
+}

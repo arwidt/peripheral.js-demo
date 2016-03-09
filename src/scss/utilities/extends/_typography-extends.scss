@@ -1,0 +1,93 @@
+/***************************************************
+
+	Paragraph Extends.
+
+***************************************************/
+
+// Base typography rules. Used on body to scaffold paragraph styles.
+%typography__typography-standard {
+	@include font-size-rem(1.3);
+
+	@include breakpoint($breakpoint--iphone-horizontal) {
+		@include font-size-rem(1.6);
+	}
+
+	color: $colors__typography-default;
+	font-family: $typography-default;
+	line-height: 1.4;
+}
+
+// Small text. Used in eyebrow navigation
+%typography__small-text {
+	@include font-size-rem(1.2);
+}
+
+// Large text. Used in site navigation
+%typography__large-text {
+	@include font-size-rem(2);
+}
+
+// Big header. Used on startpage
+%typography__large-header {
+	@include font-size-rem(7);
+	font-weight: $font-weight__thin;
+}
+
+%typography__large-ingress {
+	@include font-size-rem(2.8);
+	font-weight: $font-weight__thin;
+}
+
+/*
+    External link
+*/
+
+%external-link {
+    @extend .icon-icon_link;
+    color: $colors__typography-link;
+    position: relative;
+  	display: inline-block;
+	font-weight: $font-weight__bold;
+
+    &::before {
+        position: relative;
+        font-size: 1em;
+        margin-right: .5em;
+        top: -.2em;
+
+		// IE-Fix
+		@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+			top: 0;
+		}
+    }
+
+	&:hover {
+		text-decoration: none;
+	}
+}
+
+/*
+	Screen reader only text / headers
+*/
+
+%sr-only, .sr-only {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	margin: -1px;
+	padding: 0;
+	overflow: hidden;
+	clip: rect(0, 0, 0, 0);
+	border: 0;
+}
+
+/*
+	Ellipsis
+*/
+
+%ellipsis {
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	overflow: hidden;
+	max-width: 100%;
+}

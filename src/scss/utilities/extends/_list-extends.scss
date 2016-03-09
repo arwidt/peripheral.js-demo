@@ -1,0 +1,30 @@
+/*
+**	file: _list-extends.scss
+**	path: assets/scss/globals/utilities/extends/_list-extends.scss
+**
+**	List extends.
+**
+*/
+
+
+// Use on li parent to create inline list
+%list__inline-list {
+
+	padding: 0;
+	margin: 0;
+
+	li {
+		display: inline;
+	}
+}
+
+// Use on li parent to create inline-block list
+%list__inline-block-list {
+
+	padding: 0;
+	margin: 0;
+
+	li {
+		display: inline-block;
+	}
+}

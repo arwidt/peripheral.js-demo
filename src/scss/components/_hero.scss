@@ -1,0 +1,7 @@
+
+.hero {
+    @extend %content-section;
+
+    background: $colors__background-2;
+    height: 400px;
+}

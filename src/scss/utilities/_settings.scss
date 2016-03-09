@@ -1,0 +1,60 @@
+
+// MARGINS AND SIZED
+$sizes__global_pagewidth: 980px;
+$sizes__global_largepagewidth: 1320px;
+
+// BREAKPOINTS
+$breakpoint--xs: max-width 767px;
+$breakpoint--sm: 768px;
+$breakpoint--md: 992px;
+$breakpoint--lg: 1020px;
+
+$breakpoint--md-max: max-width 991px;
+
+$breakpoint--iphone4-vertical: 320px;
+$breakpoint--iphone4-horizontal: 480px;
+
+$breakpoint--iphone5-vertical: 320px;
+$breakpoint--iphone5-horizontal: 568px;
+
+$breakpoint--iphone6-vertical: 375px;
+$breakpoint--iphone6-horizontal: 667px;
+
+$breakpoint--iphone6plus-vertical: 414px;
+$breakpoint--iphone6plus-horizontal: 736px;
+
+$breakpoint--iphone-horizontal: 568px;
+$breakpoint--iphone-horizontal-max: max-width 567px;
+
+$breakpoint--ipad-vertical: 768px;
+$breakpoint--ipad-vertical-max: max-width 767px;
+$breakpoint--ipad-horizontal: 1024px;
+
+$breakpoint--ipad-vertical-only: 768px 1023px;
+
+$breakpoint--desktop: 1025px;
+
+$breakpoint--adswrapper--start: 1350px;
+$breakpoint--adswrapper--end: 1690px;
+
+$breakpoint--largepagewidth: $sizes__global_largepagewidth + 30px;
+
+/*doc
+---
+title: Susy Settings
+name: Susy Settings
+category: Settings
+---
+*/
+
+$susy: (
+    columns: 12,
+    math: fluid,
+    mode: isolate,
+    debug: (
+        image: hide
+    ),
+    gutters: 0.888,
+    gutter-position: after,
+    global-box-sizing: border-box
+);
