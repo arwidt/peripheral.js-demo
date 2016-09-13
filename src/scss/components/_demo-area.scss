@@ -4,4 +4,13 @@
 
     background: $colors__background-4;
     height: auto;
+
+    padding: 100px 20px;
+
+    .demo__item {
+        padding: 20px;
+        background-color: white;
+        border-radius: 3px;
+        margin-bottom: 20px;
+    }
 }

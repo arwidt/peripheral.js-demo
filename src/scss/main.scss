@@ -15,7 +15,9 @@
 @import "utilities/mixins/animation-mixins";
 
 // Extends
+@import "utilities/extends/global-extends";
 @import "utilities/extends/layout-extends";
+@import "utilities/extends/typography-extends";
 
 @import "base/normalize";
 @import "base/base";
