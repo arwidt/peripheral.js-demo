@@ -17,8 +17,8 @@ $colors__background-2:                      #8FBC94;
 $colors__background-3:                      #548687;
 $colors__background-4:                      #56445D;
 
-$colors__typography-default:                #333;
-$colors__typography-link:					#333;
+$colors__typography-default:                #FFF;
+$colors__typography-link:					#FFF;
 
 
 /*
@@ -34,7 +34,7 @@ $borders__thin-default: 1px solid black;
 
 /* Font families */
 
-$typography-default: "Open Sans";
+$typography-default: 'Open Sans Condensed', sans-serif;
 
 /* Font weights */
 

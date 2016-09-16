@@ -8,9 +8,65 @@
     padding: 100px 20px;
 
     .demo__item {
+        @include container;
         padding: 20px;
         background-color: white;
         border-radius: 3px;
         margin-bottom: 20px;
+    }
+}
+
+%demo__square {
+    @include span(3 no-gutter);
+
+    display: block;
+    border-radius: 3px;
+
+    div {
+        display: block;
+        width: 100%;
+        height: 50px;
+        box-shadow: inset 0 3px 10px rgba(0,0,0,0.4)
+    }
+
+    @include breakpoint($breakpoint--iphone6-vertical) {
+        @include span(2 no-gutter);
+    }
+
+    @include breakpoint($breakpoint--ipad-vertical) {
+        @include span(1 no-gutter);
+    }
+
+    @include breakpoint(1150px) {
+        div {
+            height: 70px;
+        }
+    }
+}
+
+.demo__square {
+    &--1 {
+        @extend %demo__square;
+        div {
+            background-color: $colors__background-1;
+        }
+    }
+    &--2 {
+        @extend %demo__square;
+        div {
+            background-color: $colors__background-2;
+        }
+    }
+    &--3 {
+        @extend %demo__square;
+        div {
+            background-color: $colors__background-3;
+        }
+    }
+    &--4 {
+        @extend %demo__square;
+        div {
+            background-color: $colors__background-4;
+        }
     }
 }

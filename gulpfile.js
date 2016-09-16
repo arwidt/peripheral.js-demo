@@ -26,6 +26,7 @@ gulp.task('default', function() {
             taskmodules.style.sass.create('src/scss/main.scss', 'main.min.css', 'public/css/', false, false)
         ], function() {
             connect.reload();
+            console.log("WATCH COMPLETE:", new Date().toTimeString());
         });
     });
 

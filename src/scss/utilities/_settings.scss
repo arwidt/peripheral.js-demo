@@ -34,9 +34,6 @@ $breakpoint--ipad-vertical-only: 768px 1023px;
 
 $breakpoint--desktop: 1025px;
 
-$breakpoint--adswrapper--start: 1350px;
-$breakpoint--adswrapper--end: 1690px;
-
 $breakpoint--largepagewidth: $sizes__global_largepagewidth + 30px;
 
 /*doc
@@ -55,6 +52,6 @@ $susy: (
         image: hide
     ),
     gutters: 0.888,
-    gutter-position: after,
+    gutter-position: inside,
     global-box-sizing: border-box
 );
